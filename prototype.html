@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Website Title</title>
+  <!-- Add CSS link for styling -->
+  <style>
+    /* Reset default margin and padding for body and container */
+    body, .header-container {
+      margin: 0;
+      padding: 0;
+      background-color: darkblue;
+    }
+
+    /* Set container height and background image */
+    .header-container {
+      height: 200px; /* Adjust height as needed */
+      background-image: url('https://content.civicplus.com/api/assets/fb28ab2e-fa0a-49d2-8f9c-ba33ea9d0d72?cache=1800&width=2794&mode=min'); /* Replace with your image URL */
+      background-size: cover; /* Set background image to cover the container */
+      background-position: center center; /* Set background image to center horizontally and vertically */
+    }
+
+    /* Add styles for header content, such as logo and navigation links */
+    /* Example styles */
+    .logo {
+      margin-top: 20px; /* Add margin as needed */
+      text-align: center; /* Center the logo within the container */
+      font-size: 20px;
+      color: #fff; /* Set text color to white */
+      text-decoration: none;
+    }
+
+    .nav {
+      margin-top: 20px; /* Add margin as needed */
+      text-align: center; /* Center the navigation links within the container */
+    }
+
+    .nav a {
+      margin: 0 10px; /* Add margin between navigation links */
+      color: #fff; /* Set text color to white */
+      text-decoration: none;
+    }
+
+
+    
+
+
+
+    .black-header {
+      background-color: #000; /* Set background color to black */
+      color: #fff; /* Set text color to white */
+      padding: 10px 0; /* Add padding as needed */
+      text-align: center; /* Center the content within the black header section */
+      height: 75px;
+    }
+
+    .black-header h1 {
+      margin: 0; /* Reset margin for heading */
+    }
+
+
+
+
+     .box-container {
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center boxes horizontally */
+      margin-top: 10px; /* Add margin as needed */
+      align-items: center;
+      
+    }
+
+    .box button{
+       /* Distribute boxes evenly within the container */
+      background-color: #fff; /* Set background color for boxes */
+      height: 35px; /* Set height for boxes */
+     /* Add margin between boxes as needed */
+      width: 120px;
+      color: black;
+      margin: 0px 120px;
+     }
+
+     .circle-header {
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50%;
+  justify-content: center;
+ 
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default styles for all devices */
+.opening-video {
+  margin-top: 100px;
+  align-items: center;
+  margin-left: 500px;
+}
+
+/* Media query for screens smaller than 600px (e.g., smartphones) */
+@media (max-width: 600px) {
+  .opening-video {
+    /* Styles for screens smaller than 600px go here */
+    /* For example: */
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+/* Media query for screens between 601px and 1024px (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .opening-video {
+    /* Styles for screens between 601px and 1024px go here */
+    /* For example: */
+    margin: 15px;
+    width: 80%;
+  }
+}
+
+/* Media query for screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1025px) {
+  .opening-video {
+    /* Styles for screens larger than 1024px go here */
+    /* For example: */
+    margin-top: 100px;
+   align-items: center;
+   width: 610px;
+   height: 425px;
+   display: flex;
+    margin-left: 475px;
+   
+  }
+}
+
+
+
+
+/* Middle boxes container*/
+
+.middle-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the boxes */
+  align-items: center; 
+   
+  
+    }
+
+    
+    
+
+.middle-box {
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  margin: 0px 200px;/* Add other styles for the middle boxes as needed */
+  margin-top: 150px;
+  text-decoration: double;
+  color: black;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+/* CSS for flash animation */
+
+
+
+
+.bottom-container {
+  align-items: center;
+  
+}
+
+
+   
+
+  </style>
+</head>
+
+<body>
+  <!-- Container with background image for header -->
+  <div class="header-container">
+    
+   
+  </div>
+  
+  <!--Black Header Section-->
+  <div class="black-header">
+    <div class="box-container">
+        <a class="box">
+          <button>Standings</button>
+        </a> 
+
+        <a class="box">
+          <button>Rules</button>
+        </a>
+        
+        
+        <div class="circle-header" href="https://cdn.discordapp.com/attachments/1091126597244956683/1091138716988350465/logo2-removebg-preview.png"></div>
+        
+        <a class="box"> 
+          <button>Team Sign Up</button>
+        </a>
+
+        <div class="box">
+          <button>Schedule</button>
+
+          
+
+        </div>
+      
+  </div>
+
+  <!--Opening Video-->
+  <div class="opening-video" id="player">
+   <iframe width="600" height="425" src="https://www.youtube.com/embed/o3sejGrJGbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+
+
+
+  <!--Discord widget and about us-->
+  <div class="middle-container" id="myContainer">
+  
+    <div class="middle-box" id="box1"><h2> Hello! We are all students here in Santa Barbara at SBCC. We all love video games and hope to spread the fun of video games to are community. </h2> </div>
+
+    <div class="middle-box" id="box2"> <iframe src="https://discordapp.com/widget?id=1091125591694118942&theme=dark" width="300" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> </div>
+
+  </div>
+
+
+  <!-- 3 Boxes-->
+  
+  
+  <div class="bottom-container" >
+  
+    <div class="bottom-img">  </div>
+  
+    <div class="bottom-box">   </div>
+  
+    <div class="bottom-img">   </div>
+  
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
