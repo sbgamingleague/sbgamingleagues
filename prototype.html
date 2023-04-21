@@ -5,48 +5,59 @@
   <title>Website Title</title>
   <!-- Add CSS link for styling -->
   <style>
-    /* Reset default margin and padding for body and container */
-    body, .header-container {
-      margin: 0;
-      padding: 0;
-      background-color: darkblue;
-    }
+    
+body, .header-container {
+  margin: 0;
+  padding: 0;
+  background-color: #04193E;
+}
 
-    /* Set container height and background image */
-    .header-container {
-      height: 200px; /* Adjust height as needed */
-      background-image: url('https://content.civicplus.com/api/assets/fb28ab2e-fa0a-49d2-8f9c-ba33ea9d0d72?cache=1800&width=2794&mode=min'); /* Replace with your image URL */
-      background-size: cover; /* Set background image to cover the container */
-      background-position: center center; /* Set background image to center horizontally and vertically */
-    }
+/* Set container height and background image */
+.header-container {
+  height: 200px; /* Adjust height as needed */
+  background-image: url('https://content.civicplus.com/api/assets/fb28ab2e-fa0a-49d2-8f9c-ba33ea9d0d72?cache=1800&width=2794&mode=min'); /* Replace with your image URL */
+  background-size: cover; /* Set background image to cover the container */
+  background-position: center center; /* Set background image to center horizontally and vertically */
+}
 
-    /* Add styles for header content, such as logo and navigation links */
-    /* Example styles */
-    .logo {
-      margin-top: 20px; /* Add margin as needed */
-      text-align: center; /* Center the logo within the container */
-      font-size: 20px;
-      color: #fff; /* Set text color to white */
-      text-decoration: none;
-    }
+/* Media query for screens with a maximum width of 767 pixels (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .header-container {
+    height: 75px; /* Adjust height as needed for smaller screens */
+    background-size: cover;
+    background-image: url('https://content.civicplus.com/api/assets/fb28ab2e-fa0a-49d2-8f9c-ba33ea9d0d72?cache=1800&width=2794&mode=min');
+    background-position: center center;
+  }
+}
+    
 
-    .nav {
-      margin-top: 20px; /* Add margin as needed */
-      text-align: center; /* Center the navigation links within the container */
-    }
+.signup-button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 1460px;
+  margin-top: 295px;
 
-    .nav a {
-      margin: 0 10px; /* Add margin between navigation links */
-      color: #fff; /* Set text color to white */
-      text-decoration: none;
-    }
+}
+.signup-button a {
+   text-decoration: none;
+   color: inherit;
+}
+
+   
+
+    
 
 
     
 
 
 
-    .black-header {
+   
+
+
+  .black-header {
       background-color: #000; /* Set background color to black */
       color: #fff; /* Set text color to white */
       padding: 10px 0; /* Add padding as needed */
@@ -57,11 +68,26 @@
     .black-header h1 {
       margin: 0; /* Reset margin for heading */
     }
+    @media (max-width: 767px) {
+  .black-header {
+    /* Styles for smaller screens go here */
+    /* For example: */
+    height: 50px; /* Adjust height as needed for smaller screens */
+    padding: 5px 0; /* Adjust padding as needed for smaller screens */
+  }
+}
+
+  
 
 
 
+    
+    
+    
 
-     .box-container {
+/* This is the objects in the header */
+    
+    .box-container {
       display: flex; /* Use flexbox for layout */
       justify-content: center; /* Center boxes horizontally */
       margin-top: 10px; /* Add margin as needed */
@@ -77,18 +103,41 @@
       width: 120px;
       color: black;
       margin: 0px 120px;
+      cursor: pointer;
      }
 
+    .box button:hover{
+        color:darkblue
+    }
+
+    
+    @media (max-width: 767px){
+    .box-container{ 
+        display: flex;
+     }
+    
+    .box button {
+    /* Styles for smaller screens go here */
+    /* For example: */
+    margin: 5px; /* Adjust margin as needed for smaller screens */
+  }
+}
+
+
+
+    
+    
+    
      .circle-header {
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
   background-color: white;
   border-radius: 50%;
   justify-content: center;
- 
+  background-image: url(https://media.discordapp.net/attachments/1091126597244956683/1091138716988350465/logo2-removebg-preview.png?width=692&height=562);
   background-size: cover;
-  background-position: center;
-}
+  background-position: -11px center;
+     }
 
 
 
@@ -118,21 +167,12 @@
   .opening-video {
     /* Styles for screens smaller than 600px go here */
     /* For example: */
-    margin: 10px;
-    width: 100%;
+    margin: 200px;
+    width: 300px;
+    align-items: center;
+    display: flex;
   }
 }
-
-/* Media query for screens between 601px and 1024px (e.g., tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .opening-video {
-    /* Styles for screens between 601px and 1024px go here */
-    /* For example: */
-    margin: 15px;
-    width: 80%;
-  }
-}
-
 /* Media query for screens larger than 1024px (e.g., desktops) */
 @media (min-width: 1025px) {
   .opening-video {
@@ -143,10 +183,14 @@
    width: 610px;
    height: 425px;
    display: flex;
-    margin-left: 475px;
-   
-  }
+    margin-left: 460px;
 }
+}
+
+
+
+
+
 
 
 
@@ -157,14 +201,10 @@
   display: flex;
   justify-content: center; /* Horizontally center the boxes */
   align-items: center; 
-   
-  
-    }
+   }
 
     
-    
-
-.middle-box {
+    .middle-box {
   background-color: white;
   width: 300px;
   height: 500px;
@@ -175,18 +215,177 @@
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
 }
-/* CSS for flash animation */
 
+@media(max-width: 767px) {
+    .middle-container{
+        display: flex;
 
-
-
-.bottom-container {
-  align-items: center;
-  
+    }
+    .middle-box{
+        width: 100px;
+        height: 300px;
+    }
 }
 
 
-   
+
+
+
+
+/* The bottom boxes container */
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-left: 25px;
+}
+
+.bottom-box {
+  position: relative;
+    text-align: center;
+    /* Set width and height of the boxes */
+    width: 280px; /* Adjust to desired width */
+    height: 230px; /* Adjust to desired height */
+    /* Optionally, you can add margin or padding to create space between the boxes */
+    margin: 100px; /* Adjust to desired margin */
+    padding: 5px; /* Adjust to desired padding */
+    /* Set background color to white */
+    background-color: #fff;
+    /* Set border-radius to create soft edges */
+    border-radius: 10px;
+    /* Set box-shadow to create a soft shadow effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    color: black;
+}
+
+
+.bottom-box img {
+    /* Set image to fit within the box */
+    max-width: 100%;
+    max-height: 100%;
+    /* Set absolute positioning to center the image within the box */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bottom-box h2 {
+    font-weight: bold;
+  }
+
+
+
+  @media(max-width: 767px){
+    .bottom-container{
+      display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 25px;
+
+    }
+
+    .bottom-box{
+      width: 180px;
+      height: 130px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+  
+  
+  
+  /* Footer boxes/ Social Page*/ 
+  .footer {
+    position: fixed; /* or position: absolute; */
+    bottom: 0;
+    width: 100%; /* Set the width of the footer to 100% */
+    background-color: #f8f8f8; /* Add any other styles as needed */
+    /* Add any other styles as needed */
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add any other styles as needed */
+    margin-top: 150px;
+    position: relative;
+    
+  }
+
+  .footer-box {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    /* Add any other styles as needed */
+    margin: 35px;
+  }
+
+  .footer-box:hover{
+    transform: scale(1.2);
+  }
+
+  .footer-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* The feedback/ Merch footer  */
+footer {
+  position: relative;
+}
+
+.footer-rectangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+.rectangle {
+  height: 95%;
+  width: 15%; /* Set a width */
+  position: absolute;
+}
+
+.rectangle.left {
+  background-color: grey;
+  left: 0; /* Position on the left */
+  color: white;
+}
+
+.rectangle.right {
+  background-color: grey;
+  right: 0; /* Position on the right */
+  color: white;
+}
+
+  
+  
+
+
+ 
 
   </style>
 </head>
@@ -195,29 +394,33 @@
   <!-- Container with background image for header -->
   <div class="header-container">
     
+    
+    <button class="signup-button"><a href="signup.html">Sign up</a></button>
+  
    
   </div>
   
   <!--Black Header Section-->
   <div class="black-header">
     <div class="box-container">
-        <a class="box">
+        <a class="box" href="standings.html">
           <button>Standings</button>
         </a> 
 
-        <a class="box">
+        <a class="box" href="rules.html">
           <button>Rules</button>
         </a>
         
         
         <div class="circle-header" href="https://cdn.discordapp.com/attachments/1091126597244956683/1091138716988350465/logo2-removebg-preview.png"></div>
         
-        <a class="box"> 
+        <a class="box" href="https://forms.gle/iJrNnSKg5DHmUefg6"> 
           <button>Team Sign Up</button>
         </a>
 
-        <div class="box">
+        <a class="box" href="schedule.html">
           <button>Schedule</button>
+          </a>
 
           
 
@@ -238,7 +441,7 @@
   
     <div class="middle-box" id="box1"><h2> Hello! We are all students here in Santa Barbara at SBCC. We all love video games and hope to spread the fun of video games to are community. </h2> </div>
 
-    <div class="middle-box" id="box2"> <iframe src="https://discordapp.com/widget?id=1091125591694118942&theme=dark" width="300" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> </div>
+    <div class="middle-box" id="box2"> <iframe src="https://discord.com/widget?id=1091125591694118942&theme=dark" width="300" height="600" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> </div>
 
   </div>
 
@@ -248,13 +451,17 @@
   
   <div class="bottom-container" >
   
-    <div class="bottom-img">  </div>
+    <div class="bottom-box">  
+      <img src="https://paradisegrillandpizzeria.com/wp-content/uploads/2021/10/shutterstock_582934354cleanforparadisesm.png" alt="Image 1">
+    </div>
   
-    <div class="bottom-box">   </div>
+    <div class="bottom-box"><h2><strong>The winning team of the league will win the SBGL Trophy, and get a free pizza party!!</strong></h2>  </div>
   
-    <div class="bottom-img">   </div>
+    <div class="bottom-box">   
+      <img src="https://ae01.alicdn.com/kf/HTB1Q2VVa7fb_uJjSsD4q6yqiFXaX/trophy-hot-sale-Competition-medals-trophy-wholesale-High-quality-trophy-gold-sports-trophies-Games.jpg" alt="Image 2">
+    </div>
   
-  </div>
+  </div>   
 
 
 
@@ -263,5 +470,61 @@
 
 
 </body>
+
+<footer>
+
+<div class="footer-container">
+
+  
+
+  <div class="footer-box"> 
+    <a href="https://www.twitch.tv/">
+    <img src="https://cdn-1.webcatalog.io/catalog/twitch/twitch-icon-filled-256.png?v=1675590045548">   
+   </a>
+   </div>
+
+   <a href="https://youtu.be/o3sejGrJGbQ">
+  <div class="footer-box"> <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/lnmhakopfojftyrzr4oa">   </div>
+  </a>
+  
+  <a href="https://www.instagram.com/sbgamingleague/">
+  <div class="footer-box"> <img src="https://cdn.iconscout.com/icon/free/png-256/instagram-1946323-1646407.png">   </div>
+</a>
+  
+  <a href="https://discord.gg/XSAnzu8yxk">
+  <div class="footer-box"> <img src="data:image/png;base64,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">    </div>
+</a>
+  
+<a href="https://www.tiktok.com/@sbgamingleague?is_from_webapp=1&sender_device=pc">
+<div class="footer-box"> <img src="https://cdn.iconscout.com/icon/free/png-256/tiktok-1865888-1581904.png?f=webp&w=256" >  </div>
+</a>
+
+
+
+
+<div class="footer-rectangle">
+
+  <a href="https://forms.gle/nHxanQvJD442dZj46">
+  <div class="rectangle left"><h2>Feedback</h2>
+  </div>
+  </a>
+
+
+  <a href="merch.html">
+  <div class="rectangle right"> <h2>Merch/Store</h2> </div>
+  </a>
+
+</div>
+ 
+
+
+
+</div>
+
+</footer>
+
+
+
+
 
 </html>
