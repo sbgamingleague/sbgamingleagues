@@ -20,10 +20,9 @@ body, .header-container {
   background-position: center center; /* Set background image to center horizontally and vertically */
 }
 
-/* Media query for screens with a maximum width of 767 pixels (e.g., mobile devices) */
 @media (max-width: 767px) {
   .header-container {
-    height: 75px; /* Adjust height as needed for smaller screens */
+    width: 100%;
     background-size: cover;
     background-image: url('https://content.civicplus.com/api/assets/fb28ab2e-fa0a-49d2-8f9c-ba33ea9d0d72?cache=1800&width=2794&mode=min');
     background-position: center center;
@@ -72,8 +71,10 @@ body, .header-container {
   .black-header {
     /* Styles for smaller screens go here */
     /* For example: */
-    height: 50px; /* Adjust height as needed for smaller screens */
+    height: 100px; /* Adjust height as needed for smaller screens */
     padding: 5px 0; /* Adjust padding as needed for smaller screens */
+    width: 100%;
+    
   }
 }
 
